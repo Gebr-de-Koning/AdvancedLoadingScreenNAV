@@ -73,6 +73,7 @@
             this.ServerComboBox.Name = "ServerComboBox";
             this.ServerComboBox.Size = new System.Drawing.Size(200, 26);
             this.ServerComboBox.TabIndex = 4;
+            this.ServerComboBox.SelectedIndexChanged += new System.EventHandler(this.ServerComboBox_SelectedIndexChanged);
             // 
             // ServerLabel
             // 
