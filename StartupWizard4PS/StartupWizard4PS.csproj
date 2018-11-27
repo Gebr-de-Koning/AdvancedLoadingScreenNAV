@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\NST100TestContosoProfielOverzichtRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SystemServiceTestRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +79,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\ProfielOverzicht.wsdl" />
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SystemServiceTestRef\StartupWizard4PS.SystemServiceTestRef.Companies_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -89,7 +113,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GDKlogo_20160616_klein witte achtergrond.png" />
@@ -107,6 +133,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\NST100TestContosoProfielOverzichtRef\" />
     <WCFMetadataStorage Include="Connected Services\SystemServiceTestRef\" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SystemServiceTestRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
