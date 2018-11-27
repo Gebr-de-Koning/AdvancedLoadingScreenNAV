@@ -1,58 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using StartupWizard4PS.SystemServiceTestRef;
 using StartupWizard4PS.NST100TestContosoProfielOverzichtRef;
 
 namespace StartupWizard4PS
 {
-    //hack: 
-    //<description>
-    //Speciaal voor opstarten 4PS
-    //</description.
-    //Form Opstartkeuze
     public partial class Opstartkeuze : Form
     {
-        string cur = "Test";
-        string baseurl; //dkp-appl
-        string NST; //test, prod, ontw (op dit niveau zitten bedrijfen SystemService)
-        string bedrijf; // contoso, sim2 , materieel sim2 (leeg) (hier zitten overige pagina's b.v. ProfielOverzicht)
+        string BaseURL { get; set; } //Dit is de URL van de APPL-server
+        string NST { get; set; } //Dit is de NST die gebruikt wordt in de cmd String
+        string Bedrijf { get; set; } //Het bedrijf waarin de applicatie moet worden opgestart
+        string Rol { get; set; } //De rol waarmee je wilt inloggen
 
         public Opstartkeuze()
         {
+            //Instellen van de base URL en de Default NST: Test
+            BaseURL = "http://DKP-APPL-01.gebrdekoning.local:7047";
+            NST = "Test";
+            Bedrijf = "";
+            Rol = "";
+
+            //Formulier opbouwen en bedrijf instellen
             InitializeComponent();
-            SetCompany("Test");
+            SetCompany(NST);
         }
 
         private void SetCompany(string CompanyName)
         {
-            //Default is Test omgeving geselecteerd in radio buttons
-            //Lees dan ook hiervan bedrijven lijst in.
-            //create the SystemService Client
-            baseurl = "http://DKP-APPL-01.gebrdekoning.local:7047";
-            baseurl += ReadCompanyList(CompanyName);
             cmbCompany.Items.Clear();
-            SystemService_PortClient systemService = new SystemService_PortClient("SystemService_Port", baseurl + "SystemService");
+            string companyURL = BaseURL + GetCompanyList();
+            SystemService_PortClient systemService = new SystemService_PortClient("SystemService_Port", companyURL + "SystemService");
             string[] companies = systemService.Companies();
             foreach (string company in companies)
                 cmbCompany.Items.Add(company);
         }
 
-        private string ReadCompanyList(string SelectedCompany)
+        // deze methode schrijft de company lijst weg
+        private string GetCompanyList()
         {
-            switch (SelectedCompany)
+            switch (NST)
             {
                 case "Test":
                     {
-                        // You can use the parentheses in a case body.
-                        return "/NST100TestWS/WS/";
+                    return "/NST100TestWS/WS/";
                     }
                 case "Ontwikkel":
                     { 
@@ -60,19 +51,21 @@ namespace StartupWizard4PS
                     }
                 case "Productie":
                     {
-                        return "/NST100ProdWS/WS/";
+                    return "/NST100ProdWS/WS/";
                     }
                 default:
-                    return "invalid";
+                    return "Invalid";
             }
             
         }
 
         private void StartNavision()
         {
-            //
             string strCmdText;
-            strCmdText = @"""C:\Program Files (x86)\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Client.exe"" -settings:""\\DKP-FP-01\APPL\NAV Client Installation 2017\Settings\NST100Test.config"" -profile:""PROJECT MANAGER""";
+
+            string NSTFinal = "NST100" + NST.Substring(0,4) + ".config";
+
+            strCmdText = @"""C:\Program Files (x86)\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Client.exe"" -settings:""\\DKP-FP-01\APPL\NAV Client Installation 2017\Settings\" + NSTFinal + @""" -profile:""" + Rol + @""" ";
             Console.WriteLine(strCmdText);
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -85,27 +78,38 @@ namespace StartupWizard4PS
             Application.Exit();
         }
 
-        private void cmbCompany_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbCompany_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string baseurl = "http://DKP-APPL-01.gebrdekoning.local:7047/NST100ONTWWS/WS/";
+            cmbRole.Items.Clear();
+            Bedrijf = cmbCompany.Text;
+            string RoleURL = BaseURL + GetCompanyList() + Uri.EscapeDataString(cmbCompany.Text) + "/Page/ProfielOverzicht";
 
-            baseurl = "http://DKP-APPL-01.gebrdekoning.local:7047/NST100TestWS/WS/";
             //create the ProfielOverzicht Client
-            ProfielOverzicht_PortClient ProfielOverzicht = new ProfielOverzicht_PortClient("ProfielOverzicht_Port", baseurl + Uri.EscapeDataString(cur) + "/Page/ProfielOverzicht");
+            ProfielOverzicht_PortClient ProfielOverzicht = new ProfielOverzicht_PortClient("ProfielOverzicht_Port", RoleURL);
 
-            ProfielOverzicht_Filter filter1 = new ProfielOverzicht_Filter();
-            filter1.Field = ProfielOverzicht_Fields.Profile_ID;
-            filter1.Criteria = "*";
+            ProfielOverzicht_Filter filter1 = new ProfielOverzicht_Filter
+            {
+                Field = ProfielOverzicht_Fields.Profile_ID,
+                Criteria = "*"
+            };
 
             ProfielOverzicht_Filter[] filters = new ProfielOverzicht_Filter[] { filter1 };
             ProfielOverzicht[] Profielen = ProfielOverzicht.ReadMultiple(filters, null, 0);
             foreach (ProfielOverzicht profiel in Profielen)
             {
-                Console.WriteLine(profiel.Description);
                 if (profiel.Profile_ID != null) cmbRole.Items.Add(profiel.Profile_ID);
-            }
-                
-                
+            }     
+        }
+
+        private void CmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Rol = cmbRole.Text;
+        }
+
+        private void ClearComboBoxes()
+        {
+            cmbRole.Text = "";
+            cmbCompany.Text = "";
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -115,21 +119,45 @@ namespace StartupWizard4PS
 
         private void rBtnOntwikkel_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb != null) if (rb.Checked) SetCompany("Ontwikkel");
+            if (sender is RadioButton rb)
+            {
+                if (rb.Checked)
+                {
+                    ClearComboBoxes();
+                    NST = "Ontwikkel";
+                    SetCompany("Ontwikkel");
+                }
+            }
         }
 
         private void rBtnTest_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb != null) if (rb.Checked) SetCompany("Test");
-
+            if (sender is RadioButton rb)
+            {
+                if (rb.Checked)
+                {
+                    ClearComboBoxes();
+                    NST = "Test";
+                    SetCompany("Test");
+                }
+            }
         }
 
         private void rBtnProductie_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb != null) if (rb.Checked) SetCompany("Productie");
+            if (sender is RadioButton rb)
+            {
+                if (rb.Checked)
+                {
+                    ClearComboBoxes();
+                    NST = "Productie";
+                    SetCompany("Productie");
+                }
+            }
+        }
+
+        private void Opstartkeuze_Load(object sender, EventArgs e)
+        {
 
         }
     }
