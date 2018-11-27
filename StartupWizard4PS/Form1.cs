@@ -69,6 +69,16 @@ namespace StartupWizard4PS
             strCmdText += @" ""dynamicsnav://DKP-APPL-01:7046/NST100" + NST.Substring(0,4) + @"/" + Bedrijf + @"/""";
             strCmdText += @" -settings:""\\DKP-FP-01\APPL\NAV Client Installation 2017\Settings\";
             strCmdText += NSTFinal + @""" -profile:""" + Rol + @""" ";
+            if (rBtnConfig.Checked) strCmdText += "-configure";
+
+            if (rBtnDev.Checked)
+                {
+                strCmdText = @"""C:\Program Files (x86)\Microsoft Dynamics NAV\100\RoleTailored Client\finsql.exe"" servername=DKP-4PS-01\";
+                string strDatabase = NST.Substring(0,4);
+                if (strDatabase=="Ontw") strDatabase = "Test";
+                strCmdText += strDatabase;
+                strCmdText += ",database=NAV100" + NST.Substring(0,4) + ",id=" + NST.Substring(0,4);
+                }
 
             Console.WriteLine(strCmdText);
             Process cmd = new Process();
