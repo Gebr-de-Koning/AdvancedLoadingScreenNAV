@@ -65,7 +65,11 @@ namespace StartupWizard4PS
 
             string NSTFinal = "NST100" + NST.Substring(0,4) + ".config";
 
-            strCmdText = @"""C:\Program Files (x86)\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Client.exe"" -settings:""\\DKP-FP-01\APPL\NAV Client Installation 2017\Settings\" + NSTFinal + @""" -profile:""" + Rol + @""" ";
+            strCmdText = @"""C:\Program Files (x86)\Microsoft Dynamics NAV\100\RoleTailored Client\Microsoft.Dynamics.Nav.Client.exe""";
+            strCmdText += @" ""dynamicsnav://DKP-APPL-01:7046/NST100" + NST.Substring(0,4) + @"/" + Bedrijf + @"/""";
+            strCmdText += @" -settings:""\\DKP-FP-01\APPL\NAV Client Installation 2017\Settings\";
+            strCmdText += NSTFinal + @""" -profile:""" + Rol + @""" ";
+
             Console.WriteLine(strCmdText);
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -75,6 +79,7 @@ namespace StartupWizard4PS
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
             cmd.StandardInput.WriteLine(strCmdText);
+            cmd.WaitForExit(1000);
             Application.Exit();
         }
 
