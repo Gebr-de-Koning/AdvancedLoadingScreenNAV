@@ -90,7 +90,7 @@ namespace StartupWizard4PS
             cmd.Start();
             cmd.StandardInput.WriteLine(strCmdText);
             cmd.WaitForExit(1000);
-            Application.Exit();
+            if (chkClose.Checked) Application.Exit();
         }
 
         private void CmbCompany_SelectedIndexChanged(object sender, EventArgs e)

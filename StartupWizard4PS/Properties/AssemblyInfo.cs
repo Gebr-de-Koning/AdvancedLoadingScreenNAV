@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StartupWizard4PS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Advanced Login Screen")]
+[assembly: AssemblyDescription("Login screen for Dynamics")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCompany("Gebr. De Koning")]
 [assembly: AssemblyProduct("StartupWizard4PS")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2018")]
+[assembly: AssemblyCopyright("Copyright © De Koning ICT 2018, JVe YWi")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
