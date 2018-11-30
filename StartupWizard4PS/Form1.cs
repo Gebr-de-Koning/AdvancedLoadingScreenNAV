@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using StartupWizard4PS.SystemServiceTestRef;
 using StartupWizard4PS.NST100TestContosoProfielOverzichtRef;
+using System.ServiceModel;
 
 namespace StartupWizard4PS
 {
@@ -138,9 +139,16 @@ namespace StartupWizard4PS
             {
                 if (rb.Checked)
                 {
+                    try { 
                     ClearComboBoxes();
                     NST = "Ontwikkel";
                     SetCompany("Ontwikkel");
+                    }
+                    catch(ServerTooBusyException ex)
+                    {
+                        MessageBox.Show("De service van de Ontwikkel NST is niet online. Neem contact op met de systeembeheerder", "NST Fout", MessageBoxButtons.OK);
+                        rBtnOntwikkel.Checked = false;
+                    }
                 }
             }
         }
@@ -151,9 +159,16 @@ namespace StartupWizard4PS
             {
                 if (rb.Checked)
                 {
+                    try { 
                     ClearComboBoxes();
                     NST = "Test";
                     SetCompany("Test");
+                    }
+                    catch(ServerTooBusyException ex)
+                    {
+                        MessageBox.Show("De service van de Test NST is niet online. Neem contact op met de systeembeheerder", "NST Fout", MessageBoxButtons.OK);
+                        rBtnTest.Checked = false;
+                    }
                 }
             }
         }
@@ -164,9 +179,16 @@ namespace StartupWizard4PS
             {
                 if (rb.Checked)
                 {
+                    try { 
                     ClearComboBoxes();
                     NST = "Productie";
                     SetCompany("Productie");
+                    }
+                    catch(ServerTooBusyException ex)
+                    {
+                        MessageBox.Show("De service van de Productie NST is niet online. Neem contact op met de systeembeheerder", "NST Fout", MessageBoxButtons.OK);
+                        rBtnProductie.Checked = false;
+                    }
                 }
             }
         }
