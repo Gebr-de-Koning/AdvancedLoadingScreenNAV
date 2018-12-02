@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/QlNwu2oqBet5ACxQCBp2YXWUaw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Q8QKbV8dqadVRJYk7/pSUdKn0yQ=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="SystemService_Binding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="PersGebrInstelling_Binding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SystemService_Binding</serializedValue>
+          <serializedValue>PersGebrInstelling_Binding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="SystemService_Port" contract="SystemServiceTestRef.SystemService_Port" bindingType="basicHttpBinding" address="http://dkp-appl-01.gebrdekoning.local:7047/NST100TestWS/WS/SystemService" bindingConfiguration="SystemService_Binding">
+    <endpoint name="PersGebrInstelling_Port" contract="PersGebrInstellingRef.PersGebrInstelling_Port" bindingType="basicHttpBinding" address="http://dkp-appl-01.gebrdekoning.local:7047/NST100TestWS/WS/Contoso GWW bedrijf/Page/PersGebrInstelling" bindingConfiguration="PersGebrInstelling_Binding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://dkp-appl-01.gebrdekoning.local:7047/NST100TestWS/WS/SystemService</serializedValue>
+          <serializedValue>http://dkp-appl-01.gebrdekoning.local:7047/NST100TestWS/WS/Contoso%20GWW%20bedrijf/Page/PersGebrInstelling</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -124,10 +124,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SystemService_Binding</serializedValue>
+          <serializedValue>PersGebrInstelling_Binding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SystemServiceTestRef.SystemService_Port</serializedValue>
+          <serializedValue>PersGebrInstellingRef.PersGebrInstelling_Port</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>SystemService_Port</serializedValue>
+          <serializedValue>PersGebrInstelling_Port</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

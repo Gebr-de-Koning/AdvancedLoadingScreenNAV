@@ -8,20 +8,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StartupWizard4PS.SystemServiceTestRef {
+namespace StartupWizard4PS.SystemServiceRef {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/nav/system/", ConfigurationName="SystemServiceTestRef.SystemService_Port")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/nav/system/", ConfigurationName="SystemServiceRef.SystemService_Port")]
     public interface SystemService_Port {
         
         // CODEGEN: Generating message contract since the wrapper name (Companies_Result) of message Companies_Result does not match the default value (Companies)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/nav/system/:Companies", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.SystemServiceTestRef.Companies_Result Companies(StartupWizard4PS.SystemServiceTestRef.Companies request);
+        StartupWizard4PS.SystemServiceRef.Companies_Result Companies(StartupWizard4PS.SystemServiceRef.Companies request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/nav/system/:Companies", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceTestRef.Companies_Result> CompaniesAsync(StartupWizard4PS.SystemServiceTestRef.Companies request);
+        System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceRef.Companies_Result> CompaniesAsync(StartupWizard4PS.SystemServiceRef.Companies request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -53,12 +53,12 @@ namespace StartupWizard4PS.SystemServiceTestRef {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface SystemService_PortChannel : StartupWizard4PS.SystemServiceTestRef.SystemService_Port, System.ServiceModel.IClientChannel {
+    public interface SystemService_PortChannel : StartupWizard4PS.SystemServiceRef.SystemService_Port, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SystemService_PortClient : System.ServiceModel.ClientBase<StartupWizard4PS.SystemServiceTestRef.SystemService_Port>, StartupWizard4PS.SystemServiceTestRef.SystemService_Port {
+    public partial class SystemService_PortClient : System.ServiceModel.ClientBase<StartupWizard4PS.SystemServiceRef.SystemService_Port>, StartupWizard4PS.SystemServiceRef.SystemService_Port {
         
         public SystemService_PortClient() {
         }
@@ -80,24 +80,24 @@ namespace StartupWizard4PS.SystemServiceTestRef {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.SystemServiceTestRef.Companies_Result StartupWizard4PS.SystemServiceTestRef.SystemService_Port.Companies(StartupWizard4PS.SystemServiceTestRef.Companies request) {
+        StartupWizard4PS.SystemServiceRef.Companies_Result StartupWizard4PS.SystemServiceRef.SystemService_Port.Companies(StartupWizard4PS.SystemServiceRef.Companies request) {
             return base.Channel.Companies(request);
         }
         
         public string[] Companies() {
-            StartupWizard4PS.SystemServiceTestRef.Companies inValue = new StartupWizard4PS.SystemServiceTestRef.Companies();
-            StartupWizard4PS.SystemServiceTestRef.Companies_Result retVal = ((StartupWizard4PS.SystemServiceTestRef.SystemService_Port)(this)).Companies(inValue);
+            StartupWizard4PS.SystemServiceRef.Companies inValue = new StartupWizard4PS.SystemServiceRef.Companies();
+            StartupWizard4PS.SystemServiceRef.Companies_Result retVal = ((StartupWizard4PS.SystemServiceRef.SystemService_Port)(this)).Companies(inValue);
             return retVal.return_value;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceTestRef.Companies_Result> StartupWizard4PS.SystemServiceTestRef.SystemService_Port.CompaniesAsync(StartupWizard4PS.SystemServiceTestRef.Companies request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceRef.Companies_Result> StartupWizard4PS.SystemServiceRef.SystemService_Port.CompaniesAsync(StartupWizard4PS.SystemServiceRef.Companies request) {
             return base.Channel.CompaniesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceTestRef.Companies_Result> CompaniesAsync() {
-            StartupWizard4PS.SystemServiceTestRef.Companies inValue = new StartupWizard4PS.SystemServiceTestRef.Companies();
-            return ((StartupWizard4PS.SystemServiceTestRef.SystemService_Port)(this)).CompaniesAsync(inValue);
+        public System.Threading.Tasks.Task<StartupWizard4PS.SystemServiceRef.Companies_Result> CompaniesAsync() {
+            StartupWizard4PS.SystemServiceRef.Companies inValue = new StartupWizard4PS.SystemServiceRef.Companies();
+            return ((StartupWizard4PS.SystemServiceRef.SystemService_Port)(this)).CompaniesAsync(inValue);
         }
     }
 }

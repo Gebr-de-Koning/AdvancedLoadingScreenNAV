@@ -58,7 +58,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Navision.ico</ApplicationIcon>
@@ -82,12 +82,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\NST100TestContosoProfielOverzichtRef\Reference.cs">
+    <Compile Include="Connected Services\PersGebrInstellingRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\SystemServiceTestRef\Reference.cs">
+    <Compile Include="Connected Services\ProfielOverzichtRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SystemServiceRef\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -98,6 +103,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NST.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -113,29 +119,45 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\ProfielOverzicht.wsdl" />
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result.datasource">
+    <None Include="Connected Services\PersGebrInstellingRef\PersGebrInstelling.wsdl" />
+    <None Include="Connected Services\PersGebrInstellingRef\StartupWizard4PS.PersGebrInstellingRef.GetRecIdFromKey_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result.datasource">
+    <None Include="Connected Services\PersGebrInstellingRef\StartupWizard4PS.PersGebrInstellingRef.IsUpdated_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht.datasource">
+    <None Include="Connected Services\PersGebrInstellingRef\StartupWizard4PS.PersGebrInstellingRef.PersGebrInstelling.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result.datasource">
+    <None Include="Connected Services\PersGebrInstellingRef\StartupWizard4PS.PersGebrInstellingRef.ReadByRecId_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result.datasource">
+    <None Include="Connected Services\PersGebrInstellingRef\StartupWizard4PS.PersGebrInstellingRef.ReadMultiple_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result.datasource">
+    <None Include="Connected Services\ProfielOverzichtRef\ProfielOverzicht.wsdl" />
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SystemServiceTestRef\StartupWizard4PS.SystemServiceTestRef.Companies_Result.datasource">
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\SystemServiceTestRef\SystemService.wsdl" />
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ProfielOverzichtRef\StartupWizard4PS.ProfielOverzichtRef.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SystemServiceRef\StartupWizard4PS.SystemServiceRef.Companies_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SystemServiceRef\SystemService.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -168,29 +190,30 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\NST100TestContosoProfielOverzichtRef\" />
-    <WCFMetadataStorage Include="Connected Services\SystemServiceTestRef\" />
+    <WCFMetadataStorage Include="Connected Services\PersGebrInstellingRef\" />
+    <WCFMetadataStorage Include="Connected Services\ProfielOverzichtRef\" />
+    <WCFMetadataStorage Include="Connected Services\SystemServiceRef\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SystemServiceTestRef\configuration91.svcinfo" />
+    <None Include="Connected Services\SystemServiceRef\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SystemServiceTestRef\configuration.svcinfo" />
+    <None Include="Connected Services\SystemServiceRef\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SystemServiceTestRef\Reference.svcmap">
+    <None Include="Connected Services\SystemServiceRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\configuration91.svcinfo" />
+    <None Include="Connected Services\ProfielOverzichtRef\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\configuration.svcinfo" />
+    <None Include="Connected Services\ProfielOverzichtRef\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\NST100TestContosoProfielOverzichtRef\Reference.svcmap">
+    <None Include="Connected Services\ProfielOverzichtRef\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -208,6 +231,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\PersGebrInstellingRef\configuration91.svcinfo" />
+    <None Include="Connected Services\PersGebrInstellingRef\configuration.svcinfo" />
+    <None Include="Connected Services\PersGebrInstellingRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Navision.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

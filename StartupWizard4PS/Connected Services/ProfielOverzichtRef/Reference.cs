@@ -8,52 +8,52 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
+namespace StartupWizard4PS.ProfielOverzichtRef {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", ConfigurationName="NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", ConfigurationName="ProfielOverzichtRef.ProfielOverzicht_Port")]
     public interface ProfielOverzicht_Port {
         
         // CODEGEN: Generating message contract since the wrapper name (Read_Result) of message Read_Result does not match the default value (Read)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:Read", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result Read(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read request);
+        StartupWizard4PS.ProfielOverzichtRef.Read_Result Read(StartupWizard4PS.ProfielOverzichtRef.Read request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:Read", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result> ReadAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read request);
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.Read_Result> ReadAsync(StartupWizard4PS.ProfielOverzichtRef.Read request);
         
         // CODEGEN: Generating message contract since the wrapper name (ReadByRecId_Result) of message ReadByRecId_Result does not match the default value (ReadByRecId)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:ReadByRecId", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result ReadByRecId(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId request);
+        StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result ReadByRecId(StartupWizard4PS.ProfielOverzichtRef.ReadByRecId request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:ReadByRecId", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result> ReadByRecIdAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId request);
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result> ReadByRecIdAsync(StartupWizard4PS.ProfielOverzichtRef.ReadByRecId request);
         
         // CODEGEN: Generating message contract since the wrapper name (ReadMultiple_Result) of message ReadMultiple_Result does not match the default value (ReadMultiple)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:ReadMultiple", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result ReadMultiple(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple request);
+        StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result ReadMultiple(StartupWizard4PS.ProfielOverzichtRef.ReadMultiple request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:ReadMultiple", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result> ReadMultipleAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple request);
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result> ReadMultipleAsync(StartupWizard4PS.ProfielOverzichtRef.ReadMultiple request);
         
         // CODEGEN: Generating message contract since the wrapper name (IsUpdated_Result) of message IsUpdated_Result does not match the default value (IsUpdated)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:IsUpdated", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result IsUpdated(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated request);
+        StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result IsUpdated(StartupWizard4PS.ProfielOverzichtRef.IsUpdated request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:IsUpdated", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result> IsUpdatedAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated request);
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result> IsUpdatedAsync(StartupWizard4PS.ProfielOverzichtRef.IsUpdated request);
         
         // CODEGEN: Generating message contract since the wrapper name (GetRecIdFromKey_Result) of message GetRecIdFromKey_Result does not match the default value (GetRecIdFromKey)
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:GetRecIdFromKey", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result GetRecIdFromKey(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey request);
+        StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result GetRecIdFromKey(StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey request);
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:microsoft-dynamics-schemas/page/profieloverzicht:GetRecIdFromKey", ReplyAction="*")]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey request);
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey request);
     }
     
     /// <remarks/>
@@ -388,12 +388,12 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
     public partial class Read_Result {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", Order=0)]
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht ProfielOverzicht;
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht ProfielOverzicht;
         
         public Read_Result() {
         }
         
-        public Read_Result(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht ProfielOverzicht) {
+        public Read_Result(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht ProfielOverzicht) {
             this.ProfielOverzicht = ProfielOverzicht;
         }
     }
@@ -422,12 +422,12 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
     public partial class ReadByRecId_Result {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", Order=0)]
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht ProfielOverzicht;
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht ProfielOverzicht;
         
         public ReadByRecId_Result() {
         }
         
-        public ReadByRecId_Result(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht ProfielOverzicht) {
+        public ReadByRecId_Result(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht ProfielOverzicht) {
             this.ProfielOverzicht = ProfielOverzicht;
         }
     }
@@ -440,7 +440,7 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("filter")]
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Filter[] filter;
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Filter[] filter;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", Order=1)]
         public string bookmarkKey;
@@ -451,7 +451,7 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
         public ReadMultiple() {
         }
         
-        public ReadMultiple(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
+        public ReadMultiple(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
             this.filter = filter;
             this.bookmarkKey = bookmarkKey;
             this.setSize = setSize;
@@ -466,12 +466,12 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="ReadMultiple_Result", Namespace="urn:microsoft-dynamics-schemas/page/profieloverzicht", Order=0)]
         [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht[] ReadMultiple_Result1;
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht[] ReadMultiple_Result1;
         
         public ReadMultiple_Result() {
         }
         
-        public ReadMultiple_Result(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht[] ReadMultiple_Result1) {
+        public ReadMultiple_Result(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht[] ReadMultiple_Result1) {
             this.ReadMultiple_Result1 = ReadMultiple_Result1;
         }
     }
@@ -545,12 +545,12 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ProfielOverzicht_PortChannel : StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port, System.ServiceModel.IClientChannel {
+    public interface ProfielOverzicht_PortChannel : StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ProfielOverzicht_PortClient : System.ServiceModel.ClientBase<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port>, StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port {
+    public partial class ProfielOverzicht_PortClient : System.ServiceModel.ClientBase<StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port>, StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port {
         
         public ProfielOverzicht_PortClient() {
         }
@@ -572,122 +572,122 @@ namespace StartupWizard4PS.NST100TestContosoProfielOverzichtRef {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.Read(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read request) {
+        StartupWizard4PS.ProfielOverzichtRef.Read_Result StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.Read(StartupWizard4PS.ProfielOverzichtRef.Read request) {
             return base.Channel.Read(request);
         }
         
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht Read(string Profile_ID) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read();
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht Read(string Profile_ID) {
+            StartupWizard4PS.ProfielOverzichtRef.Read inValue = new StartupWizard4PS.ProfielOverzichtRef.Read();
             inValue.Profile_ID = Profile_ID;
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result retVal = ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).Read(inValue);
+            StartupWizard4PS.ProfielOverzichtRef.Read_Result retVal = ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).Read(inValue);
             return retVal.ProfielOverzicht;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result> StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.ReadAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.Read_Result> StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.ReadAsync(StartupWizard4PS.ProfielOverzichtRef.Read request) {
             return base.Channel.ReadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read_Result> ReadAsync(string Profile_ID) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.Read();
+        public System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.Read_Result> ReadAsync(string Profile_ID) {
+            StartupWizard4PS.ProfielOverzichtRef.Read inValue = new StartupWizard4PS.ProfielOverzichtRef.Read();
             inValue.Profile_ID = Profile_ID;
-            return ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadAsync(inValue);
+            return ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.ReadByRecId(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId request) {
+        StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.ReadByRecId(StartupWizard4PS.ProfielOverzichtRef.ReadByRecId request) {
             return base.Channel.ReadByRecId(request);
         }
         
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht ReadByRecId(string recId) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId();
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht ReadByRecId(string recId) {
+            StartupWizard4PS.ProfielOverzichtRef.ReadByRecId inValue = new StartupWizard4PS.ProfielOverzichtRef.ReadByRecId();
             inValue.recId = recId;
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result retVal = ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadByRecId(inValue);
+            StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result retVal = ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadByRecId(inValue);
             return retVal.ProfielOverzicht;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result> StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.ReadByRecIdAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result> StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.ReadByRecIdAsync(StartupWizard4PS.ProfielOverzichtRef.ReadByRecId request) {
             return base.Channel.ReadByRecIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId_Result> ReadByRecIdAsync(string recId) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadByRecId();
+        public System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadByRecId_Result> ReadByRecIdAsync(string recId) {
+            StartupWizard4PS.ProfielOverzichtRef.ReadByRecId inValue = new StartupWizard4PS.ProfielOverzichtRef.ReadByRecId();
             inValue.recId = recId;
-            return ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadByRecIdAsync(inValue);
+            return ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadByRecIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.ReadMultiple(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple request) {
+        StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.ReadMultiple(StartupWizard4PS.ProfielOverzichtRef.ReadMultiple request) {
             return base.Channel.ReadMultiple(request);
         }
         
-        public StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht[] ReadMultiple(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple();
+        public StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht[] ReadMultiple(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
+            StartupWizard4PS.ProfielOverzichtRef.ReadMultiple inValue = new StartupWizard4PS.ProfielOverzichtRef.ReadMultiple();
             inValue.filter = filter;
             inValue.bookmarkKey = bookmarkKey;
             inValue.setSize = setSize;
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result retVal = ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadMultiple(inValue);
+            StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result retVal = ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadMultiple(inValue);
             return retVal.ReadMultiple_Result1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result> StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.ReadMultipleAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result> StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.ReadMultipleAsync(StartupWizard4PS.ProfielOverzichtRef.ReadMultiple request) {
             return base.Channel.ReadMultipleAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple_Result> ReadMultipleAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ReadMultiple();
+        public System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.ReadMultiple_Result> ReadMultipleAsync(StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Filter[] filter, string bookmarkKey, int setSize) {
+            StartupWizard4PS.ProfielOverzichtRef.ReadMultiple inValue = new StartupWizard4PS.ProfielOverzichtRef.ReadMultiple();
             inValue.filter = filter;
             inValue.bookmarkKey = bookmarkKey;
             inValue.setSize = setSize;
-            return ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadMultipleAsync(inValue);
+            return ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).ReadMultipleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.IsUpdated(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated request) {
+        StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.IsUpdated(StartupWizard4PS.ProfielOverzichtRef.IsUpdated request) {
             return base.Channel.IsUpdated(request);
         }
         
         public bool IsUpdated(string Key) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated();
+            StartupWizard4PS.ProfielOverzichtRef.IsUpdated inValue = new StartupWizard4PS.ProfielOverzichtRef.IsUpdated();
             inValue.Key = Key;
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result retVal = ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).IsUpdated(inValue);
+            StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result retVal = ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).IsUpdated(inValue);
             return retVal.IsUpdated_Result1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result> StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.IsUpdatedAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result> StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.IsUpdatedAsync(StartupWizard4PS.ProfielOverzichtRef.IsUpdated request) {
             return base.Channel.IsUpdatedAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated_Result> IsUpdatedAsync(string Key) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.IsUpdated();
+        public System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.IsUpdated_Result> IsUpdatedAsync(string Key) {
+            StartupWizard4PS.ProfielOverzichtRef.IsUpdated inValue = new StartupWizard4PS.ProfielOverzichtRef.IsUpdated();
             inValue.Key = Key;
-            return ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).IsUpdatedAsync(inValue);
+            return ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).IsUpdatedAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.GetRecIdFromKey(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey request) {
+        StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.GetRecIdFromKey(StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey request) {
             return base.Channel.GetRecIdFromKey(request);
         }
         
         public string GetRecIdFromKey(string Key) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey();
+            StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey inValue = new StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey();
             inValue.Key = Key;
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result retVal = ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).GetRecIdFromKey(inValue);
+            StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result retVal = ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).GetRecIdFromKey(inValue);
             return retVal.GetRecIdFromKey_Result1;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result> StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port.GetRecIdFromKeyAsync(StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey request) {
+        System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result> StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port.GetRecIdFromKeyAsync(StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey request) {
             return base.Channel.GetRecIdFromKeyAsync(request);
         }
         
-        public System.Threading.Tasks.Task<StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(string Key) {
-            StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey inValue = new StartupWizard4PS.NST100TestContosoProfielOverzichtRef.GetRecIdFromKey();
+        public System.Threading.Tasks.Task<StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey_Result> GetRecIdFromKeyAsync(string Key) {
+            StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey inValue = new StartupWizard4PS.ProfielOverzichtRef.GetRecIdFromKey();
             inValue.Key = Key;
-            return ((StartupWizard4PS.NST100TestContosoProfielOverzichtRef.ProfielOverzicht_Port)(this)).GetRecIdFromKeyAsync(inValue);
+            return ((StartupWizard4PS.ProfielOverzichtRef.ProfielOverzicht_Port)(this)).GetRecIdFromKeyAsync(inValue);
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using StartupWizard4PS.SystemServiceTestRef;
-using StartupWizard4PS.NST100TestContosoProfielOverzichtRef;
+using StartupWizard4PS.SystemServiceRef;
+using StartupWizard4PS.ProfielOverzichtRef;
+using StartupWizard4PS.PersGebrInstellingRef;
 
 namespace StartupWizard4PS
 {
@@ -24,41 +25,48 @@ namespace StartupWizard4PS
             //Formulier opbouwen en bedrijf instellen
             InitializeComponent();
             SetCompany(NST);
+            string[] CompanyRole = GetPersGebrInstelling().Split(';');
+            cmbCompany.Text = CompanyRole[0];
+            cmbRole.Text = CompanyRole[1];
         }
+        private string GetNSTname()
+        {
+            // deze methode schrijft de company lijst weg
+            
+                switch (NST)
+                {
+                    case "Test":
+                        {
+                            return "/NST100TestWS/WS/";
+                        }
+                    case "Ontwikkel":
+                        {
+                            return "/NST100OntwWS/WS/";
+                        }
+                    case "Productie":
+                        {
+                            return "/NST100ProdWS/WS/";
+                        }
+                    default:
+                        return "Invalid";
+                
+
+            }
+        }
+    
 
         private void SetCompany(string CompanyName)
         {
             cmbCompany.Items.Clear();
-            string companyURL = BaseURL + GetCompanyList();
+            string companyURL = BaseURL + GetNSTname();
             SystemService_PortClient systemService = new SystemService_PortClient("SystemService_Port", companyURL + "SystemService");
             string[] companies = systemService.Companies();
+            Bedrijf = companies[0];
             foreach (string company in companies)
                 cmbCompany.Items.Add(company);
         }
 
-        // deze methode schrijft de company lijst weg
-        private string GetCompanyList()
-        {
-            switch (NST)
-            {
-                case "Test":
-                    {
-                    return "/NST100TestWS/WS/";
-                    }
-                case "Ontwikkel":
-                    { 
-                    return "/NST100OntwWS/WS/";
-                    }
-                case "Productie":
-                    {
-                    return "/NST100ProdWS/WS/";
-                    }
-                default:
-                    return "Invalid";
-            }
-            
-        }
-
+        
         private void StartNavision()
         {
             string strCmdText;
@@ -93,13 +101,33 @@ namespace StartupWizard4PS
             if (chkClose.Checked) Application.Exit();
         }
 
+        private string GetPersGebrInstelling()
+        {
+            //create the ProfielOverzicht Client
+            string PersGebrInstURL = BaseURL + GetNSTname() + Uri.EscapeDataString(Bedrijf) + "/Page/PersGebrInstelling";
+
+            PersGebrInstelling_PortClient PersGebrInstelling = new PersGebrInstelling_PortClient("PersGebrInstelling_Port", PersGebrInstURL);
+            String str = Environment.UserDomainName + "\\" + Environment.UserName;
+            PersGebrInstelling_Filter filter1 = new PersGebrInstelling_Filter
+            {
+                Field = PersGebrInstelling_Fields.User_ID, Criteria = str 
+            };
+            PersGebrInstelling_Filter[] filters = new PersGebrInstelling_Filter[] { filter1 };
+            PersGebrInstelling[] Instellingen = PersGebrInstelling.ReadMultiple(filters, null, 0);
+            foreach (PersGebrInstelling Instelling in Instellingen)
+            {
+                if (Instelling.Profile_ID != null) return Instelling.Company + ";" + Instelling.Profile_ID ;
+            }
+            return "No company found; No Role found";
+        }
+
         private void CmbCompany_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbRole.Items.Clear();
             Bedrijf = cmbCompany.Text;
-            string RoleURL = BaseURL + GetCompanyList() + Uri.EscapeDataString(cmbCompany.Text) + "/Page/ProfielOverzicht";
-
             //create the ProfielOverzicht Client
+            string RoleURL = BaseURL + GetNSTname() + Uri.EscapeDataString(cmbCompany.Text) + "/Page/ProfielOverzicht";
+                         
             ProfielOverzicht_PortClient ProfielOverzicht = new ProfielOverzicht_PortClient("ProfielOverzicht_Port", RoleURL);
 
             ProfielOverzicht_Filter filter1 = new ProfielOverzicht_Filter
@@ -132,6 +160,8 @@ namespace StartupWizard4PS
             StartNavision();
         }
 
+
+        //Set Radio buttons
         private void rBtnOntwikkel_CheckedChanged(object sender, EventArgs e)
         {
             if (sender is RadioButton rb)
@@ -141,6 +171,9 @@ namespace StartupWizard4PS
                     ClearComboBoxes();
                     NST = "Ontwikkel";
                     SetCompany("Ontwikkel");
+                    string[] CompanyRole = GetPersGebrInstelling().Split(';');
+                    cmbCompany.Text = CompanyRole[0];
+                    cmbRole.Text = CompanyRole[1];
                 }
             }
         }
@@ -154,6 +187,9 @@ namespace StartupWizard4PS
                     ClearComboBoxes();
                     NST = "Test";
                     SetCompany("Test");
+                    string[] CompanyRole = GetPersGebrInstelling().Split(';');
+                    cmbCompany.Text = CompanyRole[0];
+                    cmbRole.Text = CompanyRole[1];
                 }
             }
         }
@@ -167,13 +203,11 @@ namespace StartupWizard4PS
                     ClearComboBoxes();
                     NST = "Productie";
                     SetCompany("Productie");
+                    string[] CompanyRole = GetPersGebrInstelling().Split(';');
+                    cmbCompany.Text = CompanyRole[0];
+                    cmbRole.Text = CompanyRole[1];
                 }
             }
-        }
-
-        private void Opstartkeuze_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
