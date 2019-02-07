@@ -177,9 +177,6 @@
     <None Include="Resources\GDKlogo_20160616_klein witte achtergrond.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\4PS-logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\microsoft-dynamics-nav.png" />
   </ItemGroup>
   <ItemGroup>
@@ -237,7 +234,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="nav icon %282%29.ico" />
-    <Content Include="Navision.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
