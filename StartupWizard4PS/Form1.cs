@@ -157,6 +157,7 @@ namespace StartupWizard4PS
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
             StartNavision();
         }
 
